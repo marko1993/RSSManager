@@ -1,0 +1,6 @@
+framework module Pods_RSSManager {
+  umbrella header "Pods-RSSManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

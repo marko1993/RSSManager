@@ -7,15 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31544BDD7402C6777A318C48 /* Pods_RSSManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D5E8C986ACD2DF47A3CE62 /* Pods_RSSManager.framework */; };
+		AD02CF722B275A950024DA7F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02CF712B275A950024DA7F /* RoundedImageView.swift */; };
+		AD29EE902B2764A800CF9587 /* FavouriteChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29EE8F2B2764A800CF9587 /* FavouriteChannelCell.swift */; };
+		AD30EC962B24734B00C071CF /* RSSFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30EC952B24734B00C071CF /* RSSFeedViewController.swift */; };
+		AD30EC982B24735700C071CF /* RSSFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30EC972B24735700C071CF /* RSSFeedViewModel.swift */; };
+		AD30EC9B2B24736900C071CF /* RSSFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30EC9A2B24736900C071CF /* RSSFeedView.swift */; };
+		AD30EC9D2B24739E00C071CF /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30EC9C2B24739E00C071CF /* FavouritesViewController.swift */; };
+		AD30EC9F2B2473AC00C071CF /* FavouritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30EC9E2B2473AC00C071CF /* FavouritesViewModel.swift */; };
+		AD30ECA22B2473BB00C071CF /* FavouritesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECA12B2473BB00C071CF /* FavouritesView.swift */; };
+		AD30ECA42B2473CD00C071CF /* LikedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECA32B2473CD00C071CF /* LikedViewController.swift */; };
+		AD30ECA62B2473D800C071CF /* LikedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECA52B2473D800C071CF /* LikedViewModel.swift */; };
+		AD30ECA92B2473E900C071CF /* LikedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECA82B2473E900C071CF /* LikedView.swift */; };
+		AD30ECAB2B2473F800C071CF /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECAA2B2473F800C071CF /* OptionsViewController.swift */; };
+		AD30ECAD2B24740200C071CF /* OptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECAC2B24740200C071CF /* OptionsViewModel.swift */; };
+		AD30ECB02B24741100C071CF /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECAF2B24741100C071CF /* OptionsView.swift */; };
+		AD30ECB42B247CFC00C071CF /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECB32B247CFC00C071CF /* RegisterViewController.swift */; };
+		AD30ECB62B247D0500C071CF /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECB52B247D0500C071CF /* RegisterViewModel.swift */; };
+		AD30ECB92B247D1600C071CF /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECB82B247D1600C071CF /* RegisterView.swift */; };
+		AD30ECBB2B247D2600C071CF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECBA2B247D2600C071CF /* LoginViewController.swift */; };
+		AD30ECBD2B247D3100C071CF /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECBC2B247D3100C071CF /* LoginViewModel.swift */; };
+		AD30ECC02B247D4200C071CF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECBF2B247D4200C071CF /* LoginView.swift */; };
+		AD30ECC22B247E3600C071CF /* AuthorizationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECC12B247E3600C071CF /* AuthorizationCoordinator.swift */; };
+		AD30ECC42B247FC000C071CF /* AuthorizationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECC32B247FC000C071CF /* AuthorizationAssembly.swift */; };
+		AD30ECC62B24935400C071CF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECC52B24935400C071CF /* MainCoordinator.swift */; };
+		AD30ECC82B24B32300C071CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD30ECC72B24B32300C071CF /* GoogleService-Info.plist */; };
+		ADC405612B25F6C000DE1A6A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC405602B25F6C000DE1A6A /* Button.swift */; };
+		ADC405632B25F7A600DE1A6A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC405622B25F7A600DE1A6A /* TextField.swift */; };
+		ADC405662B25FE5D00DE1A6A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC405652B25FE5D00DE1A6A /* AuthService.swift */; };
+		ADD03B1F2B270CC60004B638 /* RSSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD03B1E2B270CC60004B638 /* RSSService.swift */; };
+		ADD03B212B272C110004B638 /* RSSChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD03B202B272C110004B638 /* RSSChannelCell.swift */; };
+		ADEA8A422B25FF7B0024ABA8 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A412B25FF7B0024ABA8 /* ServiceAssembly.swift */; };
+		ADEA8A452B260BE40024ABA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A442B260BE30024ABA8 /* User.swift */; };
+		ADEA8A472B260C140024ABA8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A462B260C140024ABA8 /* UserService.swift */; };
+		ADEA8A4A2B2634AA0024ABA8 /* RSSItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A492B2634AA0024ABA8 /* RSSItem.swift */; };
+		ADEA8A4C2B26382F0024ABA8 /* RSSChannel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A4B2B26382F0024ABA8 /* RSSChannel.swift */; };
+		ADEA8A4E2B263C0A0024ABA8 /* RSSParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A4D2B263C0A0024ABA8 /* RSSParserDelegate.swift */; };
+		ADEA8A502B263FB00024ABA8 /* XMLParserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A4F2B263FB00024ABA8 /* XMLParserService.swift */; };
+		ADEA8A522B264D250024ABA8 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A512B264D250024ABA8 /* SearchBar.swift */; };
 		ADFCE32F2B236EC100BF07A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE32E2B236EC100BF07A9 /* AppDelegate.swift */; };
 		ADFCE3312B236EC100BF07A9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3302B236EC100BF07A9 /* SceneDelegate.swift */; };
-		ADFCE3332B236EC100BF07A9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3322B236EC100BF07A9 /* ViewController.swift */; };
-		ADFCE3362B236EC100BF07A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFCE3342B236EC100BF07A9 /* Main.storyboard */; };
 		ADFCE3382B236EC700BF07A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADFCE3372B236EC700BF07A9 /* Assets.xcassets */; };
 		ADFCE33B2B236EC700BF07A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ADFCE3392B236EC700BF07A9 /* LaunchScreen.storyboard */; };
 		ADFCE3462B236EC800BF07A9 /* RSSManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3452B236EC800BF07A9 /* RSSManagerTests.swift */; };
 		ADFCE3502B236EC800BF07A9 /* RSSManagerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE34F2B236EC800BF07A9 /* RSSManagerUITests.swift */; };
 		ADFCE3522B236EC800BF07A9 /* RSSManagerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3512B236EC800BF07A9 /* RSSManagerUITestsLaunchTests.swift */; };
+		ADFCE3682B23731900BF07A9 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3672B23731900BF07A9 /* Constants.swift */; };
+		ADFCE36A2B23737C00BF07A9 /* Assembler+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3692B23737C00BF07A9 /* Assembler+Extensions.swift */; };
+		ADFCE36C2B2375F600BF07A9 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE36B2B2375F600BF07A9 /* UIView+Extensions.swift */; };
+		ADFCE36E2B23762A00BF07A9 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE36D2B23762A00BF07A9 /* String+Extensions.swift */; };
+		ADFCE3712B23768800BF07A9 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3702B23768800BF07A9 /* CoordinatorProtocol.swift */; };
+		ADFCE3732B237ABE00BF07A9 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3722B237ABE00BF07A9 /* BaseView.swift */; };
+		ADFCE3752B237AFE00BF07A9 /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3742B237AFE00BF07A9 /* BaseViewModel.swift */; };
+		ADFCE3772B237B2D00BF07A9 /* NetworkRequestState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3762B237B2D00BF07A9 /* NetworkRequestState.swift */; };
+		ADFCE3792B237B5D00BF07A9 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3782B237B5D00BF07A9 /* BaseViewController.swift */; };
+		ADFCE37B2B237BA500BF07A9 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE37A2B237BA500BF07A9 /* LoadingIndicatorView.swift */; };
+		ADFCE37D2B237C4500BF07A9 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE37C2B237C4500BF07A9 /* HomeCoordinator.swift */; };
+		ADFCE3802B237D1B00BF07A9 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE37F2B237D1B00BF07A9 /* HomeViewController.swift */; };
+		ADFCE3822B237D2C00BF07A9 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3812B237D2C00BF07A9 /* HomeViewModel.swift */; };
+		ADFCE3882B237D8000BF07A9 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3872B237D8000BF07A9 /* TabBarItem.swift */; };
+		ADFCE38A2B237DA100BF07A9 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE3892B237DA100BF07A9 /* TabBarItemView.swift */; };
+		ADFCE38C2B237E1300BF07A9 /* HomeTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE38B2B237E1300BF07A9 /* HomeTabBar.swift */; };
+		ADFCE38E2B237F2800BF07A9 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE38D2B237F2800BF07A9 /* HomeAssembly.swift */; };
+		ADFCE3902B23884300BF07A9 /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFCE38F2B23884300BF07A9 /* UIColor+Extensions.swift */; };
+		D681A75867A01F94670169CE /* Pods_RSSManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8E8C8D16E3313C229CEA69 /* Pods_RSSManagerTests.framework */; };
+		EE2D569DCB2F5DB44E0FD5D8 /* Pods_RSSManager_RSSManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A01E43927142189808546CD /* Pods_RSSManager_RSSManagerUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +92,52 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1BFDE0A5E8DF06E430AA0DF7 /* Pods-RSSManager-RSSManagerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSManager-RSSManagerUITests.release.xcconfig"; path = "Target Support Files/Pods-RSSManager-RSSManagerUITests/Pods-RSSManager-RSSManagerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3339EB4C94B5F0E0029F3C32 /* Pods-RSSManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSManager.release.xcconfig"; path = "Target Support Files/Pods-RSSManager/Pods-RSSManager.release.xcconfig"; sourceTree = "<group>"; };
+		5825E4430A47EE57C526EB7F /* Pods-RSSManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSManager.debug.xcconfig"; path = "Target Support Files/Pods-RSSManager/Pods-RSSManager.debug.xcconfig"; sourceTree = "<group>"; };
+		58D5E8C986ACD2DF47A3CE62 /* Pods_RSSManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A01E43927142189808546CD /* Pods_RSSManager_RSSManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSManager_RSSManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60FEF3847F59F44FDCDBD315 /* Pods-RSSManager-RSSManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSManager-RSSManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-RSSManager-RSSManagerUITests/Pods-RSSManager-RSSManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		AD02CF712B275A950024DA7F /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		AD29EE8F2B2764A800CF9587 /* FavouriteChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteChannelCell.swift; sourceTree = "<group>"; };
+		AD30EC952B24734B00C071CF /* RSSFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedViewController.swift; sourceTree = "<group>"; };
+		AD30EC972B24735700C071CF /* RSSFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedViewModel.swift; sourceTree = "<group>"; };
+		AD30EC9A2B24736900C071CF /* RSSFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedView.swift; sourceTree = "<group>"; };
+		AD30EC9C2B24739E00C071CF /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		AD30EC9E2B2473AC00C071CF /* FavouritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewModel.swift; sourceTree = "<group>"; };
+		AD30ECA12B2473BB00C071CF /* FavouritesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesView.swift; sourceTree = "<group>"; };
+		AD30ECA32B2473CD00C071CF /* LikedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedViewController.swift; sourceTree = "<group>"; };
+		AD30ECA52B2473D800C071CF /* LikedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedViewModel.swift; sourceTree = "<group>"; };
+		AD30ECA82B2473E900C071CF /* LikedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedView.swift; sourceTree = "<group>"; };
+		AD30ECAA2B2473F800C071CF /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
+		AD30ECAC2B24740200C071CF /* OptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewModel.swift; sourceTree = "<group>"; };
+		AD30ECAF2B24741100C071CF /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
+		AD30ECB32B247CFC00C071CF /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		AD30ECB52B247D0500C071CF /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		AD30ECB82B247D1600C071CF /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		AD30ECBA2B247D2600C071CF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AD30ECBC2B247D3100C071CF /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		AD30ECBF2B247D4200C071CF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		AD30ECC12B247E3600C071CF /* AuthorizationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationCoordinator.swift; sourceTree = "<group>"; };
+		AD30ECC32B247FC000C071CF /* AuthorizationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAssembly.swift; sourceTree = "<group>"; };
+		AD30ECC52B24935400C071CF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		AD30ECC72B24B32300C071CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADC405602B25F6C000DE1A6A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
+		ADC405622B25F7A600DE1A6A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		ADC405652B25FE5D00DE1A6A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		ADD03B1E2B270CC60004B638 /* RSSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSService.swift; sourceTree = "<group>"; };
+		ADD03B202B272C110004B638 /* RSSChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSChannelCell.swift; sourceTree = "<group>"; };
+		ADEA8A412B25FF7B0024ABA8 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
+		ADEA8A442B260BE30024ABA8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		ADEA8A462B260C140024ABA8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		ADEA8A492B2634AA0024ABA8 /* RSSItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItem.swift; sourceTree = "<group>"; };
+		ADEA8A4B2B26382F0024ABA8 /* RSSChannel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSChannel.swift; sourceTree = "<group>"; };
+		ADEA8A4D2B263C0A0024ABA8 /* RSSParserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSParserDelegate.swift; sourceTree = "<group>"; };
+		ADEA8A4F2B263FB00024ABA8 /* XMLParserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XMLParserService.swift; sourceTree = "<group>"; };
+		ADEA8A512B264D250024ABA8 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		ADFCE32B2B236EC100BF07A9 /* RSSManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFCE32E2B236EC100BF07A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADFCE3302B236EC100BF07A9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ADFCE3322B236EC100BF07A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ADFCE3352B236EC100BF07A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		ADFCE3372B236EC700BF07A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADFCE33A2B236EC700BF07A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADFCE33C2B236EC700BF07A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +146,27 @@
 		ADFCE34B2B236EC800BF07A9 /* RSSManagerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RSSManagerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADFCE34F2B236EC800BF07A9 /* RSSManagerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSManagerUITests.swift; sourceTree = "<group>"; };
 		ADFCE3512B236EC800BF07A9 /* RSSManagerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSManagerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		ADFCE3672B23731900BF07A9 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		ADFCE3692B23737C00BF07A9 /* Assembler+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Assembler+Extensions.swift"; sourceTree = "<group>"; };
+		ADFCE36B2B2375F600BF07A9 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		ADFCE36D2B23762A00BF07A9 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		ADFCE3702B23768800BF07A9 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		ADFCE3722B237ABE00BF07A9 /* BaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		ADFCE3742B237AFE00BF07A9 /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
+		ADFCE3762B237B2D00BF07A9 /* NetworkRequestState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestState.swift; sourceTree = "<group>"; };
+		ADFCE3782B237B5D00BF07A9 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		ADFCE37A2B237BA500BF07A9 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		ADFCE37C2B237C4500BF07A9 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		ADFCE37F2B237D1B00BF07A9 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		ADFCE3812B237D2C00BF07A9 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		ADFCE3872B237D8000BF07A9 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		ADFCE3892B237DA100BF07A9 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
+		ADFCE38B2B237E1300BF07A9 /* HomeTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabBar.swift; sourceTree = "<group>"; };
+		ADFCE38D2B237F2800BF07A9 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		ADFCE38F2B23884300BF07A9 /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		C54A280036D3F72B1D62DC97 /* Pods-RSSManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSManagerTests.release.xcconfig"; path = "Target Support Files/Pods-RSSManagerTests/Pods-RSSManagerTests.release.xcconfig"; sourceTree = "<group>"; };
+		CA8E8C8D16E3313C229CEA69 /* Pods_RSSManagerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSManagerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F05D07E4F8E90512872FFC1D /* Pods-RSSManagerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSManagerTests.debug.xcconfig"; path = "Target Support Files/Pods-RSSManagerTests/Pods-RSSManagerTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31544BDD7402C6777A318C48 /* Pods_RSSManager.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D681A75867A01F94670169CE /* Pods_RSSManagerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +190,162 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE2D569DCB2F5DB44E0FD5D8 /* Pods_RSSManager_RSSManagerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		148527CB9C9199E2E40D9F5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58D5E8C986ACD2DF47A3CE62 /* Pods_RSSManager.framework */,
+				5A01E43927142189808546CD /* Pods_RSSManager_RSSManagerUITests.framework */,
+				CA8E8C8D16E3313C229CEA69 /* Pods_RSSManagerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AD30EC912B24731800C071CF /* RSSFeed */ = {
+			isa = PBXGroup;
+			children = (
+				AD30EC952B24734B00C071CF /* RSSFeedViewController.swift */,
+				AD30EC972B24735700C071CF /* RSSFeedViewModel.swift */,
+				AD30EC992B24735B00C071CF /* View */,
+			);
+			path = RSSFeed;
+			sourceTree = "<group>";
+		};
+		AD30EC922B24732000C071CF /* Favourites */ = {
+			isa = PBXGroup;
+			children = (
+				AD30EC9C2B24739E00C071CF /* FavouritesViewController.swift */,
+				AD30EC9E2B2473AC00C071CF /* FavouritesViewModel.swift */,
+				AD30ECA02B2473B000C071CF /* View */,
+			);
+			path = Favourites;
+			sourceTree = "<group>";
+		};
+		AD30EC932B24732800C071CF /* Liked */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECA32B2473CD00C071CF /* LikedViewController.swift */,
+				AD30ECA52B2473D800C071CF /* LikedViewModel.swift */,
+				AD30ECA72B2473DD00C071CF /* View */,
+			);
+			path = Liked;
+			sourceTree = "<group>";
+		};
+		AD30EC942B24732F00C071CF /* Options */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECAA2B2473F800C071CF /* OptionsViewController.swift */,
+				AD30ECAC2B24740200C071CF /* OptionsViewModel.swift */,
+				AD30ECAE2B24740600C071CF /* View */,
+			);
+			path = Options;
+			sourceTree = "<group>";
+		};
+		AD30EC992B24735B00C071CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD30EC9A2B24736900C071CF /* RSSFeedView.swift */,
+				ADD03B202B272C110004B638 /* RSSChannelCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD30ECA02B2473B000C071CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECA12B2473BB00C071CF /* FavouritesView.swift */,
+				AD29EE8F2B2764A800CF9587 /* FavouriteChannelCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD30ECA72B2473DD00C071CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECA82B2473E900C071CF /* LikedView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD30ECAE2B24740600C071CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECAF2B24741100C071CF /* OptionsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD30ECB12B247CE100C071CF /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECB32B247CFC00C071CF /* RegisterViewController.swift */,
+				AD30ECB52B247D0500C071CF /* RegisterViewModel.swift */,
+				AD30ECB72B247D0900C071CF /* View */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AD30ECB22B247CE800C071CF /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECBA2B247D2600C071CF /* LoginViewController.swift */,
+				AD30ECBC2B247D3100C071CF /* LoginViewModel.swift */,
+				AD30ECBE2B247D3400C071CF /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		AD30ECB72B247D0900C071CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECB82B247D1600C071CF /* RegisterView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AD30ECBE2B247D3400C071CF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECBF2B247D4200C071CF /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADC405642B25FE4D00DE1A6A /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ADC405652B25FE5D00DE1A6A /* AuthService.swift */,
+				ADEA8A462B260C140024ABA8 /* UserService.swift */,
+				ADEA8A4F2B263FB00024ABA8 /* XMLParserService.swift */,
+				ADD03B1E2B270CC60004B638 /* RSSService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		ADEA8A432B26013F0024ABA8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ADEA8A442B260BE30024ABA8 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		ADEA8A482B26344E0024ABA8 /* RSSParser */ = {
+			isa = PBXGroup;
+			children = (
+				ADEA8A492B2634AA0024ABA8 /* RSSItem.swift */,
+				ADEA8A4B2B26382F0024ABA8 /* RSSChannel.swift */,
+				ADEA8A4D2B263C0A0024ABA8 /* RSSParserDelegate.swift */,
+			);
+			path = RSSParser;
+			sourceTree = "<group>";
+		};
 		ADFCE3222B236EC000BF07A9 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +353,8 @@
 				ADFCE3442B236EC800BF07A9 /* RSSManagerTests */,
 				ADFCE34E2B236EC800BF07A9 /* RSSManagerUITests */,
 				ADFCE32C2B236EC100BF07A9 /* Products */,
+				E289D9F9ADCB958D111A7AB4 /* Pods */,
+				148527CB9C9199E2E40D9F5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +371,13 @@
 		ADFCE32D2B236EC100BF07A9 /* RSSManager */ = {
 			isa = PBXGroup;
 			children = (
-				ADFCE32E2B236EC100BF07A9 /* AppDelegate.swift */,
-				ADFCE3302B236EC100BF07A9 /* SceneDelegate.swift */,
-				ADFCE3322B236EC100BF07A9 /* ViewController.swift */,
-				ADFCE3342B236EC100BF07A9 /* Main.storyboard */,
-				ADFCE3372B236EC700BF07A9 /* Assets.xcassets */,
+				ADFCE3612B23728100BF07A9 /* Data */,
+				ADFCE3602B23727A00BF07A9 /* Common */,
+				ADFCE35F2B23726400BF07A9 /* Screens */,
+				ADFCE35E2B23718800BF07A9 /* SupportingFiles */,
 				ADFCE3392B236EC700BF07A9 /* LaunchScreen.storyboard */,
 				ADFCE33C2B236EC700BF07A9 /* Info.plist */,
+				AD30ECC72B24B32300C071CF /* GoogleService-Info.plist */,
 			);
 			path = RSSManager;
 			sourceTree = "<group>";
@@ -127,6 +399,157 @@
 			path = RSSManagerUITests;
 			sourceTree = "<group>";
 		};
+		ADFCE35E2B23718800BF07A9 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE32E2B236EC100BF07A9 /* AppDelegate.swift */,
+				ADFCE3302B236EC100BF07A9 /* SceneDelegate.swift */,
+				ADFCE3372B236EC700BF07A9 /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		ADFCE35F2B23726400BF07A9 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				AD30ECB22B247CE800C071CF /* Login */,
+				AD30ECB12B247CE100C071CF /* Register */,
+				AD30EC942B24732F00C071CF /* Options */,
+				AD30EC932B24732800C071CF /* Liked */,
+				AD30EC922B24732000C071CF /* Favourites */,
+				AD30EC912B24731800C071CF /* RSSFeed */,
+				ADFCE37E2B237CFF00BF07A9 /* Home */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		ADFCE3602B23727A00BF07A9 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE3662B23730200BF07A9 /* Views */,
+				ADFCE36F2B23766B00BF07A9 /* Coordinators */,
+				ADFCE3652B2372F900BF07A9 /* Assembler */,
+				ADFCE3642B2372E100BF07A9 /* Base */,
+				ADFCE3632B2372B300BF07A9 /* Extensions */,
+				ADFCE3622B2372AC00BF07A9 /* Utils */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		ADFCE3612B23728100BF07A9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				ADEA8A432B26013F0024ABA8 /* Models */,
+				ADC405642B25FE4D00DE1A6A /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		ADFCE3622B2372AC00BF07A9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ADEA8A482B26344E0024ABA8 /* RSSParser */,
+				ADFCE3672B23731900BF07A9 /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		ADFCE3632B2372B300BF07A9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE36B2B2375F600BF07A9 /* UIView+Extensions.swift */,
+				ADFCE36D2B23762A00BF07A9 /* String+Extensions.swift */,
+				ADFCE38F2B23884300BF07A9 /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		ADFCE3642B2372E100BF07A9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE3722B237ABE00BF07A9 /* BaseView.swift */,
+				ADFCE3742B237AFE00BF07A9 /* BaseViewModel.swift */,
+				ADFCE3762B237B2D00BF07A9 /* NetworkRequestState.swift */,
+				ADFCE3782B237B5D00BF07A9 /* BaseViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		ADFCE3652B2372F900BF07A9 /* Assembler */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE3692B23737C00BF07A9 /* Assembler+Extensions.swift */,
+				ADFCE38D2B237F2800BF07A9 /* HomeAssembly.swift */,
+				AD30ECC32B247FC000C071CF /* AuthorizationAssembly.swift */,
+				ADEA8A412B25FF7B0024ABA8 /* ServiceAssembly.swift */,
+			);
+			path = Assembler;
+			sourceTree = "<group>";
+		};
+		ADFCE3662B23730200BF07A9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE37A2B237BA500BF07A9 /* LoadingIndicatorView.swift */,
+				ADC405602B25F6C000DE1A6A /* Button.swift */,
+				ADC405622B25F7A600DE1A6A /* TextField.swift */,
+				ADEA8A512B264D250024ABA8 /* SearchBar.swift */,
+				AD02CF712B275A950024DA7F /* RoundedImageView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		ADFCE36F2B23766B00BF07A9 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE3702B23768800BF07A9 /* CoordinatorProtocol.swift */,
+				ADFCE37C2B237C4500BF07A9 /* HomeCoordinator.swift */,
+				AD30ECC12B247E3600C071CF /* AuthorizationCoordinator.swift */,
+				AD30ECC52B24935400C071CF /* MainCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		ADFCE37E2B237CFF00BF07A9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE37F2B237D1B00BF07A9 /* HomeViewController.swift */,
+				ADFCE3812B237D2C00BF07A9 /* HomeViewModel.swift */,
+				ADFCE3832B237D3100BF07A9 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		ADFCE3832B237D3100BF07A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE3862B237D6E00BF07A9 /* TabBar */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ADFCE3862B237D6E00BF07A9 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				ADFCE3872B237D8000BF07A9 /* TabBarItem.swift */,
+				ADFCE3892B237DA100BF07A9 /* TabBarItemView.swift */,
+				ADFCE38B2B237E1300BF07A9 /* HomeTabBar.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		E289D9F9ADCB958D111A7AB4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5825E4430A47EE57C526EB7F /* Pods-RSSManager.debug.xcconfig */,
+				3339EB4C94B5F0E0029F3C32 /* Pods-RSSManager.release.xcconfig */,
+				60FEF3847F59F44FDCDBD315 /* Pods-RSSManager-RSSManagerUITests.debug.xcconfig */,
+				1BFDE0A5E8DF06E430AA0DF7 /* Pods-RSSManager-RSSManagerUITests.release.xcconfig */,
+				F05D07E4F8E90512872FFC1D /* Pods-RSSManagerTests.debug.xcconfig */,
+				C54A280036D3F72B1D62DC97 /* Pods-RSSManagerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +557,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADFCE3552B236EC800BF07A9 /* Build configuration list for PBXNativeTarget "RSSManager" */;
 			buildPhases = (
+				3BEEBCDE431D8AA633160AB3 /* [CP] Check Pods Manifest.lock */,
 				ADFCE3272B236EC100BF07A9 /* Sources */,
 				ADFCE3282B236EC100BF07A9 /* Frameworks */,
 				ADFCE3292B236EC100BF07A9 /* Resources */,
+				26195A14D93686EE952947E0 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +576,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADFCE3582B236EC800BF07A9 /* Build configuration list for PBXNativeTarget "RSSManagerTests" */;
 			buildPhases = (
+				236F011042A6C50D7FBE5CFE /* [CP] Check Pods Manifest.lock */,
 				ADFCE33D2B236EC800BF07A9 /* Sources */,
 				ADFCE33E2B236EC800BF07A9 /* Frameworks */,
 				ADFCE33F2B236EC800BF07A9 /* Resources */,
@@ -169,9 +595,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADFCE35B2B236EC800BF07A9 /* Build configuration list for PBXNativeTarget "RSSManagerUITests" */;
 			buildPhases = (
+				FE8EF441D0DEC6B342ACE3CF /* [CP] Check Pods Manifest.lock */,
 				ADFCE3472B236EC800BF07A9 /* Sources */,
 				ADFCE3482B236EC800BF07A9 /* Frameworks */,
 				ADFCE3492B236EC800BF07A9 /* Resources */,
+				85057859C6309DC0DDA76DFC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,7 +661,7 @@
 			files = (
 				ADFCE33B2B236EC700BF07A9 /* LaunchScreen.storyboard in Resources */,
 				ADFCE3382B236EC700BF07A9 /* Assets.xcassets in Resources */,
-				ADFCE3362B236EC100BF07A9 /* Main.storyboard in Resources */,
+				AD30ECC82B24B32300C071CF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,14 +681,170 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		236F011042A6C50D7FBE5CFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSSManagerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26195A14D93686EE952947E0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSSManager/Pods-RSSManager-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSSManager/Pods-RSSManager-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSSManager/Pods-RSSManager-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BEEBCDE431D8AA633160AB3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSSManager-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		85057859C6309DC0DDA76DFC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSSManager-RSSManagerUITests/Pods-RSSManager-RSSManagerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RSSManager-RSSManagerUITests/Pods-RSSManager-RSSManagerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RSSManager-RSSManagerUITests/Pods-RSSManager-RSSManagerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE8EF441D0DEC6B342ACE3CF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RSSManager-RSSManagerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ADFCE3272B236EC100BF07A9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADFCE3332B236EC100BF07A9 /* ViewController.swift in Sources */,
+				AD30ECA42B2473CD00C071CF /* LikedViewController.swift in Sources */,
+				AD30ECC62B24935400C071CF /* MainCoordinator.swift in Sources */,
+				ADEA8A4C2B26382F0024ABA8 /* RSSChannel.swift in Sources */,
+				AD30ECC42B247FC000C071CF /* AuthorizationAssembly.swift in Sources */,
+				ADFCE37B2B237BA500BF07A9 /* LoadingIndicatorView.swift in Sources */,
+				ADFCE36C2B2375F600BF07A9 /* UIView+Extensions.swift in Sources */,
+				ADFCE38E2B237F2800BF07A9 /* HomeAssembly.swift in Sources */,
+				AD30EC9B2B24736900C071CF /* RSSFeedView.swift in Sources */,
+				ADC405612B25F6C000DE1A6A /* Button.swift in Sources */,
+				ADEA8A4E2B263C0A0024ABA8 /* RSSParserDelegate.swift in Sources */,
+				ADEA8A502B263FB00024ABA8 /* XMLParserService.swift in Sources */,
+				ADFCE3752B237AFE00BF07A9 /* BaseViewModel.swift in Sources */,
+				AD30ECC22B247E3600C071CF /* AuthorizationCoordinator.swift in Sources */,
+				ADEA8A522B264D250024ABA8 /* SearchBar.swift in Sources */,
+				AD30EC982B24735700C071CF /* RSSFeedViewModel.swift in Sources */,
+				ADFCE3902B23884300BF07A9 /* UIColor+Extensions.swift in Sources */,
+				AD30EC962B24734B00C071CF /* RSSFeedViewController.swift in Sources */,
+				AD30ECB92B247D1600C071CF /* RegisterView.swift in Sources */,
+				AD30ECAD2B24740200C071CF /* OptionsViewModel.swift in Sources */,
+				AD29EE902B2764A800CF9587 /* FavouriteChannelCell.swift in Sources */,
+				ADEA8A4A2B2634AA0024ABA8 /* RSSItem.swift in Sources */,
+				ADC405632B25F7A600DE1A6A /* TextField.swift in Sources */,
+				AD30EC9F2B2473AC00C071CF /* FavouritesViewModel.swift in Sources */,
+				ADFCE3822B237D2C00BF07A9 /* HomeViewModel.swift in Sources */,
+				ADFCE36E2B23762A00BF07A9 /* String+Extensions.swift in Sources */,
+				AD30ECB42B247CFC00C071CF /* RegisterViewController.swift in Sources */,
+				AD30ECA62B2473D800C071CF /* LikedViewModel.swift in Sources */,
+				ADFCE3712B23768800BF07A9 /* CoordinatorProtocol.swift in Sources */,
+				ADEA8A452B260BE40024ABA8 /* User.swift in Sources */,
+				ADEA8A472B260C140024ABA8 /* UserService.swift in Sources */,
+				AD30ECB62B247D0500C071CF /* RegisterViewModel.swift in Sources */,
+				ADFCE3802B237D1B00BF07A9 /* HomeViewController.swift in Sources */,
+				ADD03B1F2B270CC60004B638 /* RSSService.swift in Sources */,
+				ADD03B212B272C110004B638 /* RSSChannelCell.swift in Sources */,
+				ADFCE38C2B237E1300BF07A9 /* HomeTabBar.swift in Sources */,
+				ADFCE37D2B237C4500BF07A9 /* HomeCoordinator.swift in Sources */,
+				ADFCE3882B237D8000BF07A9 /* TabBarItem.swift in Sources */,
+				ADC405662B25FE5D00DE1A6A /* AuthService.swift in Sources */,
+				AD30ECAB2B2473F800C071CF /* OptionsViewController.swift in Sources */,
+				AD30ECBB2B247D2600C071CF /* LoginViewController.swift in Sources */,
+				ADEA8A422B25FF7B0024ABA8 /* ServiceAssembly.swift in Sources */,
+				ADFCE3792B237B5D00BF07A9 /* BaseViewController.swift in Sources */,
+				AD02CF722B275A950024DA7F /* RoundedImageView.swift in Sources */,
 				ADFCE32F2B236EC100BF07A9 /* AppDelegate.swift in Sources */,
+				AD30ECA22B2473BB00C071CF /* FavouritesView.swift in Sources */,
+				ADFCE38A2B237DA100BF07A9 /* TabBarItemView.swift in Sources */,
 				ADFCE3312B236EC100BF07A9 /* SceneDelegate.swift in Sources */,
+				AD30ECA92B2473E900C071CF /* LikedView.swift in Sources */,
+				ADFCE3732B237ABE00BF07A9 /* BaseView.swift in Sources */,
+				ADFCE3682B23731900BF07A9 /* Constants.swift in Sources */,
+				ADFCE3772B237B2D00BF07A9 /* NetworkRequestState.swift in Sources */,
+				AD30ECB02B24741100C071CF /* OptionsView.swift in Sources */,
+				AD30EC9D2B24739E00C071CF /* FavouritesViewController.swift in Sources */,
+				AD30ECC02B247D4200C071CF /* LoginView.swift in Sources */,
+				AD30ECBD2B247D3100C071CF /* LoginViewModel.swift in Sources */,
+				ADFCE36A2B23737C00BF07A9 /* Assembler+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +881,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		ADFCE3342B236EC100BF07A9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ADFCE3352B236EC100BF07A9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		ADFCE3392B236EC700BF07A9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,19 +1013,21 @@
 		};
 		ADFCE3562B236EC800BF07A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5825E4430A47EE57C526EB7F /* Pods-RSSManager.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,19 +1046,21 @@
 		};
 		ADFCE3572B236EC800BF07A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3339EB4C94B5F0E0029F3C32 /* Pods-RSSManager.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSManager/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -499,12 +1079,15 @@
 		};
 		ADFCE3592B236EC800BF07A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F05D07E4F8E90512872FFC1D /* Pods-RSSManagerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -519,12 +1102,15 @@
 		};
 		ADFCE35A2B236EC800BF07A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C54A280036D3F72B1D62DC97 /* Pods-RSSManagerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MARKETING_VERSION = 1.0;
@@ -539,11 +1125,13 @@
 		};
 		ADFCE35C2B236EC800BF07A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60FEF3847F59F44FDCDBD315 /* Pods-RSSManager-RSSManagerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.geodetpro.RSSManagerUITests;
@@ -557,11 +1145,13 @@
 		};
 		ADFCE35D2B236EC800BF07A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BFDE0A5E8DF06E430AA0DF7 /* Pods-RSSManager-RSSManagerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.geodetpro.RSSManagerUITests;

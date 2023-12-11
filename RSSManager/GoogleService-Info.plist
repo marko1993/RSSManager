@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBb1EEfc_Kz7_7uIKIikH-MNswa4Lo0Fms</string>
+	<key>GCM_SENDER_ID</key>
+	<string>46383068633</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.geodetpro.RSSManager</string>
+	<key>PROJECT_ID</key>
+	<string>rssmanager-3c905</string>
+	<key>STORAGE_BUCKET</key>
+	<string>rssmanager-3c905.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:46383068633:ios:9f72470aa98f8ec57355c8</string>
+</dict>
+</plist>
