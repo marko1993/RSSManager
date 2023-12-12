@@ -37,6 +37,12 @@ class RSSFeedViewController: BaseViewController {
         bind(requestState: self.viewModel.networkRequestStateObservable)
         bind(errorMessage: self.viewModel.errorMessageObservable)
         
+        viewModel.channelsDriver
+            .drive(onNext: { [weak self] channels in
+                self?.rssFeedView.channelsCollectionView.isHidden = channels.count == 0
+                self?.rssFeedView.emptyContentView.isHidden = channels.count > 0
+            }).disposed(by: disposeBag)
+        
         rssFeedView.addButton.onTap(disposeBag: disposeBag) { [weak self] in
             guard let url = self?.rssFeedView.searchBar.getText() else { return }
             self?.viewModel.addRSSFeed(urlString: url)

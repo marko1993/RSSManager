@@ -13,10 +13,12 @@ class RSSParserDelegate: NSObject, XMLParserDelegate {
     var channel: RSSChannel = RSSChannel()
     var currentRSSItem: RSSItem?
     var itemCount: Int = 0
+    var urlString: String?
     var limit: Int = 0
 
-    func parseXML(data: Data, limit: Int = 20) {
+    func parseXML(data: Data, limit: Int = 20, urlString: String) {
         self.limit = limit
+        self.urlString = urlString
         let parser = XMLParser(data: data)
         parser.delegate = self
         parser.parse()
@@ -49,6 +51,16 @@ class RSSParserDelegate: NSObject, XMLParserDelegate {
                 } else {
                     currentRSSItem?.description = trimmedString
                 }
+            case "pubDate":
+                if currentRSSItem == nil {
+                    channel.pubDate = trimmedString
+                } else {
+                    currentRSSItem?.pubDate = trimmedString
+                }
+            case "link":
+                if currentRSSItem != nil {
+                    currentRSSItem?.link = trimmedString
+                }
             case "url":
                 channel.imageUrl = trimmedString
             case "itunes:image":
@@ -61,8 +73,8 @@ class RSSParserDelegate: NSObject, XMLParserDelegate {
 
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "item", var item = currentRSSItem {
-            item.channelId = channel.id
             channel.items.append(item)
+            channel.url = urlString
             itemCount += 1
 
             if itemCount >= limit {

@@ -22,12 +22,12 @@ class RSSFeedViewModel: BaseViewModel {
     
     // MARK: - Private properties
     private let xmlParserService: XMLParserServiceProtocol
-    private let rssService: RSSServiceProtocol
+    private let rssChannelService: RSSChannelServiceProtocol
     private let channelsRelay: BehaviorRelay<[RSSChannel]> = .init(value: [])
     
-    init(xmlParserService: XMLParserServiceProtocol, rssService: RSSServiceProtocol) {
+    init(xmlParserService: XMLParserServiceProtocol, rssChannelService: RSSChannelServiceProtocol) {
         self.xmlParserService = xmlParserService
-        self.rssService = rssService
+        self.rssChannelService = rssChannelService
         super.init()
     }
     
@@ -46,9 +46,9 @@ extension RSSFeedViewModel: RSSFeedViewModelProtocol {
     
     func deleteChannel(_ channel: RSSChannel) {
         networkRequestState.accept(.started)
-        rssService.deleteChannel(channel)
+        rssChannelService.deleteChannel(channel)
             .flatMap { [unowned self] isSuccess -> Observable<[RSSChannel]> in
-                return self.rssService.fetchChannels()
+                return self.rssChannelService.fetchChannels()
             }
             .subscribe(onNext: { [weak self] channels in
                 self?.channelsRelay.accept(channels)
@@ -61,9 +61,9 @@ extension RSSFeedViewModel: RSSFeedViewModelProtocol {
     
     func toogleChannelIsFavourite(_ channel: RSSChannel) {
         networkRequestState.accept(.started)
-        rssService.setIsChannelFavourite(channel, isFavourite: !channel.isFavourite)
+        rssChannelService.setIsChannelFavourite(channel, isFavourite: !channel.isFavourite)
             .flatMap { [unowned self] channel -> Observable<[RSSChannel]> in
-                return self.rssService.fetchChannels()
+                return self.rssChannelService.fetchChannels()
             }
             .subscribe(onNext: { [weak self] channels in
                 self?.channelsRelay.accept(channels)
@@ -76,7 +76,7 @@ extension RSSFeedViewModel: RSSFeedViewModelProtocol {
     
     func getRSSChannels() {
         networkRequestState.accept(.started)
-        rssService.fetchChannels()
+        rssChannelService.fetchChannels()
             .subscribe(onNext: { [weak self] rssChannels in
                 self?.channelsRelay.accept(rssChannels)
             }, onError: { [weak self] error in
@@ -90,10 +90,7 @@ extension RSSFeedViewModel: RSSFeedViewModelProtocol {
         networkRequestState.accept(.started)
         xmlParserService.parseXML(urlString: urlString, limit: 20)
             .flatMap { [unowned self] channel -> Observable<RSSChannel> in
-                return self.rssService.saveChannel(channel)
-            }
-            .flatMap { [unowned self] channel -> Observable<RSSChannel> in
-                return self.rssService.saveChannelItems(channel)
+                return self.rssChannelService.saveChannel(channel)
             }
             .subscribe(onNext: { [weak self] channel in
                 self?.addChannel(channel)

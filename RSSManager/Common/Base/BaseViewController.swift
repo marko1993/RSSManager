@@ -33,6 +33,7 @@ class BaseViewController: UIViewController {
     func hideNavigationBar() {
         navigationController?.navigationBar.barStyle = .default
         navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationItem.setHidesBackButton(true, animated: true)
     }
     
     func showLoading() {

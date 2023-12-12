@@ -23,7 +23,7 @@ class XMLParserService: XMLParserServiceProtocol {
             DispatchQueue.global().async {
                 do {
                     let data = try Data(contentsOf: url)
-                    parserDelegate.parseXML(data: data)
+                    parserDelegate.parseXML(data: data, urlString: urlString)
                     observer.onNext(parserDelegate.channel)
                     observer.onCompleted()
                 } catch {

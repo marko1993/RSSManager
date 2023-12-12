@@ -15,11 +15,13 @@ enum ButtonStyle {
 
 class Button: UIButton, BaseView {
     
-    private var text: String
+    private var text: String?
+    private var attributedText: NSMutableAttributedString?
     private var type: ButtonStyle
     
-    init(text: String, type: ButtonStyle) {
+    init(text: String? = nil, attributedText: NSMutableAttributedString? = nil, type: ButtonStyle) {
         self.text = text
+        self.attributedText = attributedText
         self.type = type
         super.init(frame: .zero)
         setupView()
@@ -41,7 +43,11 @@ class Button: UIButton, BaseView {
         case .secondary:
             setupSecondaryButton()
         }
-        setTitle(text, for: .normal)
+        if let attributedText = attributedText {
+            setAttributedTitle(attributedText, for: .normal)
+        } else {
+            setTitle(text, for: .normal)
+        }
     }
     
     func positionSubviews() {

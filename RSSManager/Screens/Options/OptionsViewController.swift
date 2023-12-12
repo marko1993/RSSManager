@@ -35,6 +35,13 @@ class OptionsViewController: BaseViewController {
         bind(requestState: self.viewModel.networkRequestStateObservable)
         bind(errorMessage: self.viewModel.errorMessageObservable)
         
+        optionsView.notificationsSwitch.rx.controlEvent(.valueChanged)
+            .withLatestFrom(optionsView.notificationsSwitch.rx.isOn)
+            .subscribe(onNext: { [weak self] isOn in
+                self?.viewModel.enableNotifications(isOn)
+            })
+            .disposed(by: disposeBag)
+        
         optionsView.logOutButton.onTap(disposeBag: disposeBag) { [weak self] in
             self?.viewModel.logOut()
         }

@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		31544BDD7402C6777A318C48 /* Pods_RSSManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58D5E8C986ACD2DF47A3CE62 /* Pods_RSSManager.framework */; };
 		AD02CF722B275A950024DA7F /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD02CF712B275A950024DA7F /* RoundedImageView.swift */; };
+		AD14BD4F2B28B00100841C80 /* LikedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14BD4E2B28B00100841C80 /* LikedItemCell.swift */; };
+		AD14BD512B28BCF100841C80 /* EmptyContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14BD502B28BCF100841C80 /* EmptyContentView.swift */; };
+		AD14BD532B28C8BE00841C80 /* RSSItemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14BD522B28C8BE00841C80 /* RSSItemService.swift */; };
+		AD14BD552B28D14B00841C80 /* NSMutableAttributedString+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD14BD542B28D14B00841C80 /* NSMutableAttributedString+Extensions.swift */; };
 		AD29EE902B2764A800CF9587 /* FavouriteChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD29EE8F2B2764A800CF9587 /* FavouriteChannelCell.swift */; };
 		AD30EC962B24734B00C071CF /* RSSFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30EC952B24734B00C071CF /* RSSFeedViewController.swift */; };
 		AD30EC982B24735700C071CF /* RSSFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30EC972B24735700C071CF /* RSSFeedViewModel.swift */; };
@@ -32,10 +36,14 @@
 		AD30ECC42B247FC000C071CF /* AuthorizationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECC32B247FC000C071CF /* AuthorizationAssembly.swift */; };
 		AD30ECC62B24935400C071CF /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD30ECC52B24935400C071CF /* MainCoordinator.swift */; };
 		AD30ECC82B24B32300C071CF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD30ECC72B24B32300C071CF /* GoogleService-Info.plist */; };
+		ADB19F8D2B27845F00C59F94 /* RSSItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB19F8C2B27845F00C59F94 /* RSSItemsViewController.swift */; };
+		ADB19F8F2B27846D00C59F94 /* RSSItemsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB19F8E2B27846D00C59F94 /* RSSItemsViewModel.swift */; };
+		ADB19F922B27847F00C59F94 /* RSSItemsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB19F912B27847F00C59F94 /* RSSItemsView.swift */; };
+		ADB19F942B278A5D00C59F94 /* RSSItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB19F932B278A5D00C59F94 /* RSSItemCell.swift */; };
 		ADC405612B25F6C000DE1A6A /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC405602B25F6C000DE1A6A /* Button.swift */; };
 		ADC405632B25F7A600DE1A6A /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC405622B25F7A600DE1A6A /* TextField.swift */; };
 		ADC405662B25FE5D00DE1A6A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC405652B25FE5D00DE1A6A /* AuthService.swift */; };
-		ADD03B1F2B270CC60004B638 /* RSSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD03B1E2B270CC60004B638 /* RSSService.swift */; };
+		ADD03B1F2B270CC60004B638 /* RSSChannelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD03B1E2B270CC60004B638 /* RSSChannelService.swift */; };
 		ADD03B212B272C110004B638 /* RSSChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD03B202B272C110004B638 /* RSSChannelCell.swift */; };
 		ADEA8A422B25FF7B0024ABA8 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A412B25FF7B0024ABA8 /* ServiceAssembly.swift */; };
 		ADEA8A452B260BE40024ABA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A442B260BE30024ABA8 /* User.swift */; };
@@ -99,6 +107,10 @@
 		5A01E43927142189808546CD /* Pods_RSSManager_RSSManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RSSManager_RSSManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		60FEF3847F59F44FDCDBD315 /* Pods-RSSManager-RSSManagerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RSSManager-RSSManagerUITests.debug.xcconfig"; path = "Target Support Files/Pods-RSSManager-RSSManagerUITests/Pods-RSSManager-RSSManagerUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		AD02CF712B275A950024DA7F /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		AD14BD4E2B28B00100841C80 /* LikedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikedItemCell.swift; sourceTree = "<group>"; };
+		AD14BD502B28BCF100841C80 /* EmptyContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyContentView.swift; sourceTree = "<group>"; };
+		AD14BD522B28C8BE00841C80 /* RSSItemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemService.swift; sourceTree = "<group>"; };
+		AD14BD542B28D14B00841C80 /* NSMutableAttributedString+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+Extensions.swift"; sourceTree = "<group>"; };
 		AD29EE8F2B2764A800CF9587 /* FavouriteChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteChannelCell.swift; sourceTree = "<group>"; };
 		AD30EC952B24734B00C071CF /* RSSFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedViewController.swift; sourceTree = "<group>"; };
 		AD30EC972B24735700C071CF /* RSSFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSFeedViewModel.swift; sourceTree = "<group>"; };
@@ -122,10 +134,14 @@
 		AD30ECC32B247FC000C071CF /* AuthorizationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthorizationAssembly.swift; sourceTree = "<group>"; };
 		AD30ECC52B24935400C071CF /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		AD30ECC72B24B32300C071CF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		ADB19F8C2B27845F00C59F94 /* RSSItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemsViewController.swift; sourceTree = "<group>"; };
+		ADB19F8E2B27846D00C59F94 /* RSSItemsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemsViewModel.swift; sourceTree = "<group>"; };
+		ADB19F912B27847F00C59F94 /* RSSItemsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemsView.swift; sourceTree = "<group>"; };
+		ADB19F932B278A5D00C59F94 /* RSSItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSItemCell.swift; sourceTree = "<group>"; };
 		ADC405602B25F6C000DE1A6A /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		ADC405622B25F7A600DE1A6A /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		ADC405652B25FE5D00DE1A6A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		ADD03B1E2B270CC60004B638 /* RSSService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSService.swift; sourceTree = "<group>"; };
+		ADD03B1E2B270CC60004B638 /* RSSChannelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSChannelService.swift; sourceTree = "<group>"; };
 		ADD03B202B272C110004B638 /* RSSChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSChannelCell.swift; sourceTree = "<group>"; };
 		ADEA8A412B25FF7B0024ABA8 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		ADEA8A442B260BE30024ABA8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -269,6 +285,7 @@
 			isa = PBXGroup;
 			children = (
 				AD30ECA82B2473E900C071CF /* LikedView.swift */,
+				AD14BD4E2B28B00100841C80 /* LikedItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -317,13 +334,33 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		ADB19F8B2B27844500C59F94 /* RSSItems */ = {
+			isa = PBXGroup;
+			children = (
+				ADB19F8C2B27845F00C59F94 /* RSSItemsViewController.swift */,
+				ADB19F8E2B27846D00C59F94 /* RSSItemsViewModel.swift */,
+				ADB19F902B27847000C59F94 /* View */,
+			);
+			path = RSSItems;
+			sourceTree = "<group>";
+		};
+		ADB19F902B27847000C59F94 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ADB19F912B27847F00C59F94 /* RSSItemsView.swift */,
+				ADB19F932B278A5D00C59F94 /* RSSItemCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		ADC405642B25FE4D00DE1A6A /* Services */ = {
 			isa = PBXGroup;
 			children = (
 				ADC405652B25FE5D00DE1A6A /* AuthService.swift */,
 				ADEA8A462B260C140024ABA8 /* UserService.swift */,
 				ADEA8A4F2B263FB00024ABA8 /* XMLParserService.swift */,
-				ADD03B1E2B270CC60004B638 /* RSSService.swift */,
+				ADD03B1E2B270CC60004B638 /* RSSChannelService.swift */,
+				AD14BD522B28C8BE00841C80 /* RSSItemService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -412,6 +449,7 @@
 		ADFCE35F2B23726400BF07A9 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				ADB19F8B2B27844500C59F94 /* RSSItems */,
 				AD30ECB22B247CE800C071CF /* Login */,
 				AD30ECB12B247CE100C071CF /* Register */,
 				AD30EC942B24732F00C071CF /* Options */,
@@ -460,6 +498,7 @@
 				ADFCE36B2B2375F600BF07A9 /* UIView+Extensions.swift */,
 				ADFCE36D2B23762A00BF07A9 /* String+Extensions.swift */,
 				ADFCE38F2B23884300BF07A9 /* UIColor+Extensions.swift */,
+				AD14BD542B28D14B00841C80 /* NSMutableAttributedString+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -494,6 +533,7 @@
 				ADC405622B25F7A600DE1A6A /* TextField.swift */,
 				ADEA8A512B264D250024ABA8 /* SearchBar.swift */,
 				AD02CF712B275A950024DA7F /* RoundedImageView.swift */,
+				AD14BD502B28BCF100841C80 /* EmptyContentView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -796,6 +836,7 @@
 				ADFCE37B2B237BA500BF07A9 /* LoadingIndicatorView.swift in Sources */,
 				ADFCE36C2B2375F600BF07A9 /* UIView+Extensions.swift in Sources */,
 				ADFCE38E2B237F2800BF07A9 /* HomeAssembly.swift in Sources */,
+				AD14BD4F2B28B00100841C80 /* LikedItemCell.swift in Sources */,
 				AD30EC9B2B24736900C071CF /* RSSFeedView.swift in Sources */,
 				ADC405612B25F6C000DE1A6A /* Button.swift in Sources */,
 				ADEA8A4E2B263C0A0024ABA8 /* RSSParserDelegate.swift in Sources */,
@@ -812,17 +853,21 @@
 				ADEA8A4A2B2634AA0024ABA8 /* RSSItem.swift in Sources */,
 				ADC405632B25F7A600DE1A6A /* TextField.swift in Sources */,
 				AD30EC9F2B2473AC00C071CF /* FavouritesViewModel.swift in Sources */,
+				ADB19F942B278A5D00C59F94 /* RSSItemCell.swift in Sources */,
 				ADFCE3822B237D2C00BF07A9 /* HomeViewModel.swift in Sources */,
+				AD14BD552B28D14B00841C80 /* NSMutableAttributedString+Extensions.swift in Sources */,
 				ADFCE36E2B23762A00BF07A9 /* String+Extensions.swift in Sources */,
 				AD30ECB42B247CFC00C071CF /* RegisterViewController.swift in Sources */,
+				AD14BD512B28BCF100841C80 /* EmptyContentView.swift in Sources */,
 				AD30ECA62B2473D800C071CF /* LikedViewModel.swift in Sources */,
 				ADFCE3712B23768800BF07A9 /* CoordinatorProtocol.swift in Sources */,
 				ADEA8A452B260BE40024ABA8 /* User.swift in Sources */,
 				ADEA8A472B260C140024ABA8 /* UserService.swift in Sources */,
 				AD30ECB62B247D0500C071CF /* RegisterViewModel.swift in Sources */,
 				ADFCE3802B237D1B00BF07A9 /* HomeViewController.swift in Sources */,
-				ADD03B1F2B270CC60004B638 /* RSSService.swift in Sources */,
+				ADD03B1F2B270CC60004B638 /* RSSChannelService.swift in Sources */,
 				ADD03B212B272C110004B638 /* RSSChannelCell.swift in Sources */,
+				ADB19F8F2B27846D00C59F94 /* RSSItemsViewModel.swift in Sources */,
 				ADFCE38C2B237E1300BF07A9 /* HomeTabBar.swift in Sources */,
 				ADFCE37D2B237C4500BF07A9 /* HomeCoordinator.swift in Sources */,
 				ADFCE3882B237D8000BF07A9 /* TabBarItem.swift in Sources */,
@@ -831,13 +876,16 @@
 				AD30ECBB2B247D2600C071CF /* LoginViewController.swift in Sources */,
 				ADEA8A422B25FF7B0024ABA8 /* ServiceAssembly.swift in Sources */,
 				ADFCE3792B237B5D00BF07A9 /* BaseViewController.swift in Sources */,
+				ADB19F922B27847F00C59F94 /* RSSItemsView.swift in Sources */,
 				AD02CF722B275A950024DA7F /* RoundedImageView.swift in Sources */,
 				ADFCE32F2B236EC100BF07A9 /* AppDelegate.swift in Sources */,
 				AD30ECA22B2473BB00C071CF /* FavouritesView.swift in Sources */,
 				ADFCE38A2B237DA100BF07A9 /* TabBarItemView.swift in Sources */,
 				ADFCE3312B236EC100BF07A9 /* SceneDelegate.swift in Sources */,
+				ADB19F8D2B27845F00C59F94 /* RSSItemsViewController.swift in Sources */,
 				AD30ECA92B2473E900C071CF /* LikedView.swift in Sources */,
 				ADFCE3732B237ABE00BF07A9 /* BaseView.swift in Sources */,
+				AD14BD532B28C8BE00841C80 /* RSSItemService.swift in Sources */,
 				ADFCE3682B23731900BF07A9 /* Constants.swift in Sources */,
 				ADFCE3772B237B2D00BF07A9 /* NetworkRequestState.swift in Sources */,
 				AD30ECB02B24741100C071CF /* OptionsView.swift in Sources */,

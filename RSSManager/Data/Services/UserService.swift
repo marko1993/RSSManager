@@ -31,8 +31,7 @@ extension UserService: UserServiceProtocol {
     
     func fetchUserData(id: String) -> Observable<Bool> {
         return Observable.create { observer in
-            let userRef = self.collection.document(id)
-            userRef.getDocument { (document, error) in
+            self.collection.document(id).getDocument { (document, error) in
                 if let error = error {
                     observer.onError(error)
                 } else if let document = document, document.exists {

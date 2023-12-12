@@ -9,11 +9,11 @@ import UIKit
 
 class RegisterView: UIView, BaseView {
     
-    private lazy var titleLabel: UILabel = UILabel()
+    private lazy var imageView: UIImageView = UIImageView(image: UIImage(named: "feed"))
     lazy var nameTextField: TextField = TextField(title: K.Strings.name, placeholder: K.Strings.namePlaceholder, keyboardType: .emailAddress)
     lazy var emailTextField: TextField = TextField(title: K.Strings.email, placeholder: K.Strings.emailPlaceholder, keyboardType: .emailAddress)
     lazy var passwordTextField: TextField = TextField(title: K.Strings.password, placeholder: K.Strings.passwordPlaceholder, isSecureTextEntry: true)
-    lazy var loginButton: Button = Button(text: K.Strings.login, type: .secondary)
+    lazy var loginButton: Button = Button(attributedText: NSMutableAttributedString(string: K.Strings.alreadyHaveAccount).bold(K.Strings.login), type: .secondary)
     lazy var registerButton: Button = Button(text: K.Strings.register, type: .primary)
     
     override init(frame: CGRect) {
@@ -26,7 +26,7 @@ class RegisterView: UIView, BaseView {
     }
     
     func addSubviews() {
-        addSubview(titleLabel)
+        addSubview(imageView)
         addSubview(nameTextField)
         addSubview(emailTextField)
         addSubview(passwordTextField)
@@ -35,15 +35,16 @@ class RegisterView: UIView, BaseView {
     }
     
     func styleSubviews() {
-        titleLabel.text = K.Strings.appName
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
-        titleLabel.textAlignment = .center
+        
     }
     
     func positionSubviews() {
-        titleLabel.anchor(top: topAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 40, left: 16, bottom: 0, right: 16))
+        imageView.anchor(top: topAnchor, padding: UIEdgeInsets(top: 40, left: 0, bottom: 0, right: 0))
+        imageView.centerXToSuperview()
+        imageView.constrainWidth(100)
+        imageView.constrainHeight(100)
         
-        nameTextField.anchor(top: titleLabel.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 40, left: 16, bottom: 0, right: 16))
+        nameTextField.anchor(top: imageView.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 40, left: 16, bottom: 0, right: 16))
         
         emailTextField.anchor(top: nameTextField.bottomAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16))
         

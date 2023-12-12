@@ -9,7 +9,8 @@ import UIKit
 
 class FavouritesView: UIView, BaseView {
     
-    lazy var searchBar: SearchBar = SearchBar(placeholder: "Search favourites...")
+    lazy var searchBar: SearchBar = SearchBar(placeholder: K.Strings.favouritesSearchBarPlaceholder)
+    lazy var emptyContentView: EmptyContentView = EmptyContentView(descriptionText: K.Strings.favouritesEmptyMessage)
     lazy var channelsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -31,6 +32,7 @@ class FavouritesView: UIView, BaseView {
     
     func addSubviews() {
         addSubview(searchBar)
+        addSubview(emptyContentView)
         addSubview(channelsCollectionView)
     }
     
@@ -42,7 +44,9 @@ class FavouritesView: UIView, BaseView {
         searchBar.anchor(top: topAnchor, leading: leadingAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16))
         searchBar.constrainHeight(40)
         
-        channelsCollectionView.anchor(top: searchBar.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
+        emptyContentView.centerInSuperview()
+        
+        channelsCollectionView.anchor(top: searchBar.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 8))
     }
     
 }

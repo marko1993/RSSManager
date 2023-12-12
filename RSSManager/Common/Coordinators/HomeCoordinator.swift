@@ -33,7 +33,9 @@ class HomeCoordinator: CoordinatorProtocol {
     }
     
     func presentRSSItemsScreen(channel: RSSChannel) {
-        
+        let viewController = Assembler.sharedAssembler.resolver.resolve(RSSItemsViewController.self, argument: channel)!
+        self.currentViewController = viewController
+        self.navigationController?.present(viewController, animated: true)
     }
     
     private func createRSSFeedTabBarItem() -> TabBarItem {

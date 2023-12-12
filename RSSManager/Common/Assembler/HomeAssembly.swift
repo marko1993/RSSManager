@@ -16,6 +16,18 @@ final class HomeAssembly: Assembly {
         self.assembleLikedViewController(container)
         self.assembleOptionsViewController(container)
         self.assembleHomeViewController(container)
+        self.assembleRSSItemsViewController(container)
+    }
+    
+    private func assembleRSSItemsViewController(_ container: Container) {
+        container.register(RSSItemsViewModelProtocol.self) { (resolver, channel: RSSChannel) in
+            return RSSItemsViewModel(channel: channel, rssItemService: container.resolve(RSSItemServiceProtocol.self)!, xmlParserService: container.resolve(XMLParserServiceProtocol.self)!)
+        }.inObjectScope(.transient)
+        
+        container.register(RSSItemsViewController.self) { (resolver, channel: RSSChannel) in
+            let controller = RSSItemsViewController(viewModel: container.resolve(RSSItemsViewModelProtocol.self, argument: channel)!)
+            return controller
+        }.inObjectScope(.transient)
     }
     
     private func assembleHomeViewController(_ container: Container) {
@@ -31,7 +43,7 @@ final class HomeAssembly: Assembly {
     
     private func assembleRSSFeedViewController(_ container: Container) {
         container.register(RSSFeedViewModelProtocol.self) { r in
-            return RSSFeedViewModel(xmlParserService: container.resolve(XMLParserServiceProtocol.self)!, rssService: container.resolve(RSSServiceProtocol.self)!)
+            return RSSFeedViewModel(xmlParserService: container.resolve(XMLParserServiceProtocol.self)!, rssChannelService: container.resolve(RSSChannelServiceProtocol.self)!)
         }.inObjectScope(.transient)
         
         container.register(RSSFeedViewController.self) { r in
@@ -42,7 +54,7 @@ final class HomeAssembly: Assembly {
     
     private func assembleFavouritesViewController(_ container: Container) {
         container.register(FavouritesViewModelProtocol.self) { r in
-            return FavouritesViewModel(rssService: container.resolve(RSSServiceProtocol.self)!)
+            return FavouritesViewModel(rssChannelService: container.resolve(RSSChannelServiceProtocol.self)!)
         }.inObjectScope(.transient)
         
         container.register(FavouritesViewController.self) { r in
@@ -53,7 +65,7 @@ final class HomeAssembly: Assembly {
     
     private func assembleLikedViewController(_ container: Container) {
         container.register(LikedViewModelProtocol.self) { r in
-            return LikedViewModel()
+            return LikedViewModel(rssItemService: container.resolve(RSSItemServiceProtocol.self)!)
         }.inObjectScope(.transient)
         
         container.register(LikedViewController.self) { r in

@@ -12,6 +12,7 @@ import RxCocoa
 protocol OptionsViewModelProtocol: ViewModelProtocol {
     var onLogOutSuccessDriver: Driver<Bool> { get }
     func logOut()
+    func enableNotifications(_ shouldEnable: Bool)
 }
 
 class OptionsViewModel: BaseViewModel {
@@ -48,6 +49,10 @@ extension OptionsViewModel: OptionsViewModelProtocol {
                 self?.errorMessage.accept(error.localizedDescription)
             }
             .disposed(by: disposeBag)
+    }
+    
+    func enableNotifications(_ shouldEnable: Bool) {
+        print(shouldEnable)
     }
 
 }

@@ -9,8 +9,9 @@ import UIKit
 
 class RSSFeedView: UIView, BaseView {
     
-    lazy var searchBar: SearchBar = SearchBar(placeholder: "Enter RSS url...")
-    lazy var addButton: Button = Button(text: "Add", type: .primary)
+    lazy var searchBar: SearchBar = SearchBar(placeholder: K.Strings.feedSearchBarPlaceholder)
+    lazy var addButton: Button = Button(text: K.Strings.add, type: .primary)
+    lazy var emptyContentView: EmptyContentView = EmptyContentView(descriptionText: K.Strings.feedEmptyMessage)
     lazy var channelsCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
@@ -33,6 +34,7 @@ class RSSFeedView: UIView, BaseView {
     func addSubviews() {
         addSubview(addButton)
         addSubview(searchBar)
+        addSubview(emptyContentView)
         addSubview(channelsCollectionView)
     }
     
@@ -45,10 +47,12 @@ class RSSFeedView: UIView, BaseView {
         addButton.constrainHeight(40)
         addButton.constrainWidth(50)
         
+        emptyContentView.centerInSuperview()
+        
         searchBar.anchor(top: topAnchor, leading: leadingAnchor, trailing: addButton.leadingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 0, right: 16))
         searchBar.constrainHeight(40)
         
-        channelsCollectionView.anchor(top: searchBar.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
+        channelsCollectionView.anchor(top: searchBar.bottomAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, padding: UIEdgeInsets(top: 16, left: 8, bottom: 16, right: 8))
     }
     
 }

@@ -19,17 +19,17 @@ protocol FavouritesViewModelProtocol: ViewModelProtocol {
 class FavouritesViewModel: BaseViewModel {
     
     // MARK: - Private properties
-    private let rssService: RSSServiceProtocol
+    private let rssChannelService: RSSChannelServiceProtocol
     private let channelsRelay: BehaviorRelay<[RSSChannel]> = .init(value: [])
     
-    init(rssService: RSSServiceProtocol) {
-        self.rssService = rssService
+    init(rssChannelService: RSSChannelServiceProtocol) {
+        self.rssChannelService = rssChannelService
         super.init()
     }
     
     private func getFavourites(query: String? = nil) {
         networkRequestState.accept(.started)
-        rssService.fetchFavouriteChannels(with: query)
+        rssChannelService.fetchFavouriteChannels(with: query)
             .subscribe(onNext: { [weak self] rssChannels in
                 self?.channelsRelay.accept(rssChannels)
             }, onError: { [weak self] error in

@@ -14,7 +14,8 @@ final class ServiceAssembly: Assembly {
         self.assembleAuthService(container)
         self.assembleUserService(container)
         self.assembleXMLParserService(container)
-        self.assembleRSSService(container)
+        self.assembleRSSChannelService(container)
+        self.assembleRSSItemService(container)
     }
     
     private func assembleAuthService(_ container: Container) {
@@ -35,9 +36,15 @@ final class ServiceAssembly: Assembly {
         }.inObjectScope(.container)
     }
     
-    private func assembleRSSService(_ container: Container) {
-        container.register(RSSServiceProtocol.self) { r in
-            return RSSService()
+    private func assembleRSSChannelService(_ container: Container) {
+        container.register(RSSChannelServiceProtocol.self) { r in
+            return RSSChannelService()
+        }.inObjectScope(.transient)
+    }
+    
+    private func assembleRSSItemService(_ container: Container) {
+        container.register(RSSItemServiceProtocol.self) { r in
+            return RSSItemService()
         }.inObjectScope(.transient)
     }
     

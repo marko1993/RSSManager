@@ -21,10 +21,6 @@ class HomeViewModel: BaseViewModel {
     init(xmlParserService: XMLParserServiceProtocol) {
         self.xmlParserService = xmlParserService
         super.init()
-//        let url = "https://podcastfeeds.nbcnews.com/HL4TzgYC"
-//        xmlParserService.parseXML(urlString: url, limit: 20).subscribe(onNext: { channel in
-//            print(channel)
-//        }).disposed(by: disposeBag)
     }
     
 }

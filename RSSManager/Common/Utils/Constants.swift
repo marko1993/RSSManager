@@ -10,6 +10,7 @@ struct K {
     struct Strings {
         static let appName = "RSSManager"
         static let ok = "Ok"
+        static let add = "Add"
         static let rssFeed = "RSS Feed"
         static let favourites = "Favourites"
         static let liked = "Liked"
@@ -21,22 +22,19 @@ struct K {
         static let password = "Password"
         static let passwordPlaceholder = "Enter password..."
         static let login = "Log In"
+        static let logout = "Log Out"
         static let register = "Register"
+        static let dontHavaAccount = "Don't have an account? "
+        static let alreadyHaveAccount = "Already have an account? "
+        static let feedSearchBarPlaceholder = "Enter RSS url..."
+        static let favouritesSearchBarPlaceholder = "Search favourites..."
+        static let likedSearchBarPlaceholder = "Search liked..."
+        static let feedEmptyMessage = "There are currently no RSS feeds added. To add feed, enter url and press Add."
+        static let favouritesEmptyMessage = "There are currently no favourite RSS feeds. To add feed to favourites, press on a star icon."
+        static let likedEmptyMessage = "There are currently no liked articles. To add article, press on a like button."
     }
     
     struct Networking {
-        static let baseUrl = "https://api.github.com/"
-        
-        struct Endpoints {
-            static let fetchReposEndpoint = "search/repositories"
-            static let getUserDetailsEndpoint = "users/"
-        }
-        
-        struct Parameters {
-            static let queryParam = "q"
-            static let sortParam = "sort"
-            static let sortValue = "updated"
-        }
         
         struct Collections {
             static let users = "users"

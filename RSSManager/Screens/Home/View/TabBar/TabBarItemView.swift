@@ -50,6 +50,24 @@ class TabBarItemView: UIView, BaseView {
         }, completion: nil)
     }
     
+    private func setupTitleLabel() {
+        titleLabel.textAlignment = .center
+        titleLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
+        titleLabel.text = isSelected ? tabBarItem.title : ""
+        titleLabel.textColor = isSelected ? selectedImageColor : higlightBGColor
+    }
+    
+    private func setupTabIcon() {
+        tabIconImageView.image = UIImage(systemName: tabBarItem.image)?.withRenderingMode(.alwaysTemplate)
+        tabIconImageView.tintColor = isSelected ? selectedImageColor : defualtImageColor
+    }
+    
+    private func setupHighlightsView() {
+        highlightsView.layer.cornerRadius = 15
+        highlightsView.layer.masksToBounds = true
+        highlightsView.backgroundColor = isSelected ? higlightBGColor.withAlphaComponent(0.4) : UIColor.clear
+    }
+    
     func addSubviews() {
         addSubview(highlightsView)
         addSubview(tabIconImageView)
@@ -57,22 +75,14 @@ class TabBarItemView: UIView, BaseView {
     }
     
     func styleSubviews() {
-        titleLabel.textAlignment = .center
-        titleLabel.font = UIFont.systemFont(ofSize: 12, weight: .bold)
-        titleLabel.text = isSelected ? tabBarItem.title : ""
-        titleLabel.textColor = isSelected ? selectedImageColor : higlightBGColor
-        
-        tabIconImageView.image = UIImage(systemName: tabBarItem.image)?.withRenderingMode(.alwaysTemplate)
-        tabIconImageView.tintColor = isSelected ? selectedImageColor : defualtImageColor
-        
-        highlightsView.layer.cornerRadius = 15
-        highlightsView.layer.masksToBounds = true
-        highlightsView.backgroundColor = isSelected ? higlightBGColor : UIColor.clear
+        setupTitleLabel()
+        setupTabIcon()
+        setupHighlightsView()
     }
     
     func positionSubviews() {
         highlightsView.centerInSuperview()
-        highlightsView.anchor(size: CGSize(width: 95, height: 46))
+        highlightsView.anchor(size: CGSize(width: 95, height: 35))
         highlightsView.anchor(paddingTop: 3, paddingBottom: 3)
         
         tabIconImageView.anchor(left: leftAnchor, paddingLeft: 2, width: 20, height: 20)

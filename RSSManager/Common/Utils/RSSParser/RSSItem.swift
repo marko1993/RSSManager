@@ -9,8 +9,11 @@ import Foundation
 
 struct RSSItem {
     var id: String = UUID().uuidString
+    var link: String?
     var title: String?
     var description: String?
     var imageUrl: String?
-    var channelId: String?
+    var userId: String?
+    var pubDate: String?
+    var isLiked: Bool = false
 }

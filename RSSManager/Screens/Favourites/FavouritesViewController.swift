@@ -43,6 +43,12 @@ class FavouritesViewController: BaseViewController {
         bind(requestState: self.viewModel.networkRequestStateObservable)
         bind(errorMessage: self.viewModel.errorMessageObservable)
         
+        viewModel.channelsDriver
+            .drive(onNext: { [weak self] channels in
+                self?.favouritesView.channelsCollectionView.isHidden = channels.count == 0
+                self?.favouritesView.emptyContentView.isHidden = channels.count > 0
+            }).disposed(by: disposeBag)
+        
         favouritesView.searchBar.inputTextField
             .rx.controlEvent([.editingChanged])
             .asObservable()

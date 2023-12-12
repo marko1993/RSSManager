@@ -14,7 +14,7 @@ protocol HomeTabBarViewDelegate: AnyObject {
 
 class HomeTabBar: UIView, BaseView {
     
-    private lazy var tabContainer = UIView()
+    private lazy var tabContainer = UIVisualEffectView(effect: UIBlurEffect(style: .light))
     private lazy var tabStackView = UIStackView()
     
     private var tabBarItems: [TabBarItem]
@@ -48,6 +48,21 @@ class HomeTabBar: UIView, BaseView {
         }
     }
     
+    private func setupTabContainerView() {
+        tabContainer.backgroundColor = .white.withAlphaComponent(0.2)
+        tabContainer.layer.cornerRadius = 15
+        tabContainer.layer.masksToBounds = true
+    }
+    
+    private func setupTabStackView() {
+        tabStackView.axis = .horizontal
+        tabStackView.alignment = .fill
+        tabStackView.contentMode = .scaleToFill
+        tabStackView.distribution = .equalSpacing
+        tabStackView.spacing = 0
+        tabStackView.layer.cornerRadius = 30
+    }
+    
     func addSubviews() {
         addSubview(tabContainer)
         addSubview(tabStackView)
@@ -56,17 +71,8 @@ class HomeTabBar: UIView, BaseView {
     func styleSubviews() {
         backgroundColor = .clear
         dropShadow()
-        
-        tabContainer.backgroundColor = .white
-        tabContainer.layer.cornerRadius = 15
-        tabContainer.layer.masksToBounds = true
-        
-        tabStackView.axis = .horizontal
-        tabStackView.alignment = .fill
-        tabStackView.contentMode = .scaleToFill
-        tabStackView.distribution = .equalSpacing
-        tabStackView.spacing = 0
-        tabStackView.layer.cornerRadius = 30
+        setupTabContainerView()
+        setupTabStackView()
     }
     
     func positionSubviews() {

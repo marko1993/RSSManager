@@ -10,21 +10,19 @@ import FirebaseFirestore
 import FirebaseAuth
 import RxSwift
 
-protocol RSSServiceProtocol {
+protocol RSSChannelServiceProtocol {
     func saveChannel(_ channel: RSSChannel) -> Observable<RSSChannel>
-    func saveChannelItems(_ channel: RSSChannel) -> Observable<RSSChannel>
     func fetchChannels() -> Observable<[RSSChannel]>
     func setIsChannelFavourite(_ channel: RSSChannel, isFavourite: Bool) -> Observable<RSSChannel>
     func deleteChannel(_ channel: RSSChannel) -> Observable<Bool>
     func fetchFavouriteChannels(with query: String?) -> Observable<[RSSChannel]>
 }
 
-class RSSService {
+class RSSChannelService {
     private let rssFeedCollection: CollectionReference = Firestore.firestore().collection(K.Networking.Collections.RSSFeed)
-    private let rssItemCollection: CollectionReference = Firestore.firestore().collection(K.Networking.Collections.RSSItems)
 }
 
-extension RSSService: RSSServiceProtocol {
+extension RSSChannelService: RSSChannelServiceProtocol {
     func fetchFavouriteChannels(with queryString: String?) -> Observable<[RSSChannel]> {
         return Observable.create { observer in
             self.rssFeedCollection
@@ -42,11 +40,13 @@ extension RSSService: RSSServiceProtocol {
                                   let description = data["description"] as? String,
                                   let imageUrl = data["imageUrl"] as? String,
                                   let isFavourite = data["isFavourite"] as? Bool,
+                                  let urlString = data["url"] as? String,
+                                  let pubDate = data["pubDate"] as? String,
                                   let userId = data["userId"] as? String
                             else {
                                 continue
                             }
-                            let channel = RSSChannel(id: id, title: title, description: description, imageUrl: imageUrl, userId: userId, isFavourite: isFavourite)
+                            let channel = RSSChannel(id: id, title: title, description: description, imageUrl: imageUrl, userId: userId, url: urlString, pubDate: pubDate, isFavourite: isFavourite)
                             channels.append(channel)
                         }
                         if let queryString = queryString {
@@ -107,11 +107,13 @@ extension RSSService: RSSServiceProtocol {
                                   let description = data["description"] as? String,
                                   let imageUrl = data["imageUrl"] as? String,
                                   let isFavourite = data["isFavourite"] as? Bool,
+                                  let urlString = data["url"] as? String,
+                                  let pubDate = data["pubDate"] as? String,
                                   let userId = data["userId"] as? String
                             else {
                                 continue
                             }
-                            let channel = RSSChannel(id: id, title: title, description: description, imageUrl: imageUrl, userId: userId, isFavourite: isFavourite)
+                            let channel = RSSChannel(id: id, title: title, description: description, imageUrl: imageUrl, userId: userId, url: urlString, pubDate: pubDate, isFavourite: isFavourite)
                             channels.append(channel)
                         }
                         observer.onNext(channels)
@@ -130,6 +132,8 @@ extension RSSService: RSSServiceProtocol {
                              "description": channel.description ?? "",
                              "imageUrl": channel.imageUrl ?? "",
                              "isFavourite": channel.isFavourite,
+                             "url": channel.url ?? "",
+                             "pubDate": channel.pubDate ?? "",
                              "userId": Auth.auth().currentUser?.uid ?? ""]) {  error in
                 if let error = error {
                     observer.onError(error)
@@ -138,26 +142,6 @@ extension RSSService: RSSServiceProtocol {
                     observer.onCompleted()
                 }
             }
-            return Disposables.create()
-        }.observe(on: MainScheduler.instance)
-    }
-    
-    func saveChannelItems(_ channel: RSSChannel) -> Observable<RSSChannel> {
-        return Observable.create { observer in
-            for item in channel.items {
-                let itemData: [String: Any] = ["id": item.id,
-                                               "title": item.title ?? "",
-                                               "description": item.description ?? "",
-                                               "imageUrl": item.imageUrl ?? "",
-                                               "channelId": item.channelId ?? ""]
-                self.rssItemCollection.document(item.id).setData(itemData) { error in
-                    if let error = error {
-                        observer.onError(error)
-                    }
-                }
-            }
-            observer.onNext(channel)
-            observer.onCompleted()
             return Disposables.create()
         }.observe(on: MainScheduler.instance)
     }

@@ -20,6 +20,7 @@ class RegisterViewController: BaseViewController {
         self.viewModel = viewModel
         self.registerView = registerView
         super.init(nibName: nil, bundle: nil)
+        hideNavigationBar()
     }
     
     required init?(coder: NSCoder) {
