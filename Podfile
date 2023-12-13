@@ -10,7 +10,6 @@ target 'RSSManager' do
   pod 'SDWebImage', '~>5.0'
   pod 'IQKeyboardManagerSwift'
   pod 'Swinject'
-  pod 'FirebaseAnalytics'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
 

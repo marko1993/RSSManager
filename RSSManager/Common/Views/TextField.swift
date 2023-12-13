@@ -89,6 +89,7 @@ class TextField: UIView, BaseView {
         textField.leftViewMode = .always
         textField.rightView = insetView
         textField.rightViewMode = .always
+        textField.autocapitalizationType = .none
     }
     
     func addSubviews() {
