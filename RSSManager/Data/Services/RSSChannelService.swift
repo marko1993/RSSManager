@@ -14,6 +14,7 @@ protocol RSSChannelServiceProtocol {
     func saveChannel(_ channel: RSSChannel) -> Observable<RSSChannel>
     func fetchChannels() -> Observable<[RSSChannel]>
     func setIsChannelFavourite(_ channel: RSSChannel, isFavourite: Bool) -> Observable<RSSChannel>
+    func setNewPubDate(_ channel: RSSChannel, pubDate: String) -> Observable<RSSChannel>
     func deleteChannel(_ channel: RSSChannel) -> Observable<Bool>
     func fetchFavouriteChannels(with query: String?) -> Observable<[RSSChannel]>
 }
@@ -80,6 +81,21 @@ extension RSSChannelService: RSSChannelServiceProtocol {
         return Observable.create { observer in
             self.rssFeedCollection.document(channel.id)
                 .updateData(["isFavourite": isFavourite]) { error in
+                    if let error = error {
+                        observer.onError(error)
+                    } else {
+                        observer.onNext(channel)
+                        observer.onCompleted()
+                    }
+                }
+            return Disposables.create()
+        }.observe(on: MainScheduler.instance)
+    }
+    
+    func setNewPubDate(_ channel: RSSChannel, pubDate: String) -> Observable<RSSChannel> {
+        return Observable.create { observer in
+            self.rssFeedCollection.document(channel.id)
+                .updateData(["pubDate": pubDate]) { error in
                     if let error = error {
                         observer.onError(error)
                     } else {

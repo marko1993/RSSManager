@@ -21,6 +21,8 @@ struct K {
         static let emailPlaceholder = "Enter email..."
         static let password = "Password"
         static let passwordPlaceholder = "Enter password..."
+        static let notifications = "Notifications"
+        static let notificationsSwitchDescription = "Switch on to receive notifications for favourite RSS feeds"
         static let login = "Log In"
         static let logout = "Log Out"
         static let register = "Register"

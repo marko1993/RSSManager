@@ -72,7 +72,7 @@ class RSSParserDelegate: NSObject, XMLParserDelegate {
     }
 
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "item", var item = currentRSSItem {
+        if elementName == "item", let item = currentRSSItem {
             channel.items.append(item)
             channel.url = urlString
             itemCount += 1

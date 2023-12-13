@@ -24,13 +24,13 @@ class OptionsView: UIView, BaseView {
     }
     
     func setupTitleLabel() {
-        titleLabel.text = "Notifications"
+        titleLabel.text = K.Strings.notifications
         titleLabel.textColor = .black
         titleLabel.font = UIFont.boldSystemFont(ofSize: 18)
     }
     
     func setupNotificationsLabel() {
-        notificationsLabel.text = "Switch on to receive notifications for favourite RSS feeds"
+        notificationsLabel.text = K.Strings.notificationsSwitchDescription
         notificationsLabel.textColor = .black
         notificationsLabel.font = UIFont.systemFont(ofSize: 14)
         notificationsLabel.numberOfLines = 0

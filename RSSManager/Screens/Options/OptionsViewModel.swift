@@ -13,6 +13,7 @@ protocol OptionsViewModelProtocol: ViewModelProtocol {
     var onLogOutSuccessDriver: Driver<Bool> { get }
     func logOut()
     func enableNotifications(_ shouldEnable: Bool)
+    func areNotificationsEnabled() -> Bool
 }
 
 class OptionsViewModel: BaseViewModel {
@@ -20,11 +21,13 @@ class OptionsViewModel: BaseViewModel {
     // MARK: - Private properties
     private let authService: AuthServiceProtocol
     private let userService: UserServiceProtocol
+    private let userDefaultsService: UserDefaultsServiceProtocol
     private let onLogOutSuccessRelay: BehaviorRelay<Bool> = BehaviorRelay(value: false)
     
-    init(authService: AuthServiceProtocol, userService: UserServiceProtocol) {
+    init(authService: AuthServiceProtocol, userService: UserServiceProtocol, userDefaultsService: UserDefaultsServiceProtocol) {
         self.authService = authService
         self.userService = userService
+        self.userDefaultsService = userDefaultsService
         super.init()
     }
     
@@ -52,7 +55,11 @@ extension OptionsViewModel: OptionsViewModelProtocol {
     }
     
     func enableNotifications(_ shouldEnable: Bool) {
-        print(shouldEnable)
+        userDefaultsService.setNotificationsEnabled(shouldEnable)
+    }
+    
+    func areNotificationsEnabled() -> Bool {
+        return userDefaultsService.areNotificationsEnabled()
     }
 
 }

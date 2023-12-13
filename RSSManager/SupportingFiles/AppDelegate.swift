@@ -8,17 +8,39 @@
 import UIKit
 import IQKeyboardManagerSwift
 import FirebaseCore
+import Swinject
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+    private var backgroundService: BackgroundServiceProtocol!
+    private var notificationService: NotificationServiceProtocol!
+    private var userDefaultsService: UserDefaultsServiceProtocol!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        initializeServices()
+        if userDefaultsService.areNotificationsEnabled() {
+            setupBackgroundTaskForUpdates()
+        }
         return true
+    }
+    
+    private func initializeServices() {
+        notificationService = Assembler.sharedAssembler.resolver.resolve(NotificationServiceProtocol.self)!
+        backgroundService = Assembler.sharedAssembler.resolver.resolve(BackgroundServiceProtocol.self)!
+        userDefaultsService = Assembler.sharedAssembler.resolver.resolve(UserDefaultsServiceProtocol.self)!
+    }
+    
+    private func setupBackgroundTaskForUpdates() {
+        notificationService.getNotificationsPermission()
+        backgroundService.scheduleBackgroundTask { [weak self] showNotification in
+            if showNotification {
+                self?.notificationService.showLocalNotification()
+            }
+        }
     }
 
     // MARK: UISceneSession Lifecycle

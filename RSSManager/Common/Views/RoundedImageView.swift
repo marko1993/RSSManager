@@ -27,18 +27,25 @@ class RoundedImageView: UIView, BaseView {
         imageView.tintColor = color
     }
     
+    private func setupBackgroundView() {
+        backgroundView.backgroundColor = .lightGray.withAlphaComponent(0.7)
+        backgroundView.layer.cornerRadius = 13
+        backgroundView.layer.masksToBounds = true
+    }
+    
+    private func setupImageView() {
+        imageView.image = self.image
+        imageView.tintColor = .white
+    }
+    
     func addSubviews() {
         addSubview(backgroundView)
         backgroundView.addSubview(imageView)
     }
     
     func styleSubviews() {
-        backgroundView.backgroundColor = .lightGray.withAlphaComponent(0.7)
-        backgroundView.layer.cornerRadius = 13
-        backgroundView.layer.masksToBounds = true
-        
-        imageView.image = self.image
-        imageView.tintColor = .white
+        setupBackgroundView()
+        setupImageView()
     }
     
     func positionSubviews() {

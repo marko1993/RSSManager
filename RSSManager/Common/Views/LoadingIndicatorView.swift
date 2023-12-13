@@ -33,6 +33,32 @@ class LoadingIndicatorView: UIView {
         layer.sublayers?.removeAll()
     }
     
+    private func getScaleAnimation(duration: CFTimeInterval) -> CAKeyframeAnimation {
+        let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
+        scaleAnimation.keyTimes = [0, 0.5, 1]
+        scaleAnimation.values = [1, 0.4, 1]
+        scaleAnimation.duration = duration
+        return scaleAnimation
+    }
+    
+    private func getOpacityAnimation(duration: CFTimeInterval) -> CAKeyframeAnimation {
+        let opacityAnimaton = CAKeyframeAnimation(keyPath: "opacity")
+        opacityAnimaton.keyTimes = [0, 0.5, 1]
+        opacityAnimaton.values = [1, 0.3, 1]
+        opacityAnimaton.duration = duration
+        return opacityAnimaton
+    }
+    
+    private func getGroupAnimation(duration: CFTimeInterval) -> CAAnimationGroup {
+        let animation = CAAnimationGroup()
+        animation.animations = [getScaleAnimation(duration: duration), getOpacityAnimation(duration: duration)]
+        animation.timingFunction = CAMediaTimingFunction(name: .linear)
+        animation.duration = duration
+        animation.repeatCount = HUGE
+        animation.isRemovedOnCompletion = false
+        return animation
+    }
+    
     func setupAnimation(in layer: CALayer, size: CGSize) {
         let circleSpacing: CGFloat = -2
         let circleSize = (size.width - 4 * circleSpacing) / 5
@@ -42,29 +68,6 @@ class LoadingIndicatorView: UIView {
         let beginTime = CACurrentMediaTime()
         let beginTimes: [CFTimeInterval] = [0, 0.12, 0.24, 0.36, 0.48, 0.6, 0.72, 0.84]
 
-        // Scale animation
-        let scaleAnimation = CAKeyframeAnimation(keyPath: "transform.scale")
-
-        scaleAnimation.keyTimes = [0, 0.5, 1]
-        scaleAnimation.values = [1, 0.4, 1]
-        scaleAnimation.duration = duration
-
-        // Opacity animation
-        let opacityAnimaton = CAKeyframeAnimation(keyPath: "opacity")
-
-        opacityAnimaton.keyTimes = [0, 0.5, 1]
-        opacityAnimaton.values = [1, 0.3, 1]
-        opacityAnimaton.duration = duration
-
-        // Animation
-        let animation = CAAnimationGroup()
-
-        animation.animations = [scaleAnimation, opacityAnimaton]
-        animation.timingFunction = CAMediaTimingFunction(name: .linear)
-        animation.duration = duration
-        animation.repeatCount = HUGE
-        animation.isRemovedOnCompletion = false
-
         for i in 0 ..< 8 {
             let circle = circleAt(angle: CGFloat(Double.pi / 4) * CGFloat(i),
                                   size: circleSize,
@@ -72,6 +75,7 @@ class LoadingIndicatorView: UIView {
                                   containerSize: size,
                                   color: color)
 
+            let animation = getGroupAnimation(duration: duration)
             animation.beginTime = beginTime + beginTimes[i]
             circle.add(animation, forKey: "animation")
             layer.addSublayer(circle)

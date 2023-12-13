@@ -35,6 +35,8 @@ class OptionsViewController: BaseViewController {
         bind(requestState: self.viewModel.networkRequestStateObservable)
         bind(errorMessage: self.viewModel.errorMessageObservable)
         
+        optionsView.notificationsSwitch.isOn = viewModel.areNotificationsEnabled()
+        
         optionsView.notificationsSwitch.rx.controlEvent(.valueChanged)
             .withLatestFrom(optionsView.notificationsSwitch.rx.isOn)
             .subscribe(onNext: { [weak self] isOn in

@@ -21,7 +21,7 @@ final class HomeAssembly: Assembly {
     
     private func assembleRSSItemsViewController(_ container: Container) {
         container.register(RSSItemsViewModelProtocol.self) { (resolver, channel: RSSChannel) in
-            return RSSItemsViewModel(channel: channel, rssItemService: container.resolve(RSSItemServiceProtocol.self)!, xmlParserService: container.resolve(XMLParserServiceProtocol.self)!)
+            return RSSItemsViewModel(channel: channel, rssItemService: container.resolve(RSSItemServiceProtocol.self)!, xmlParserService: container.resolve(XMLParserServiceProtocol.self)!, rssChannelService: container.resolve(RSSChannelServiceProtocol.self)!)
         }.inObjectScope(.transient)
         
         container.register(RSSItemsViewController.self) { (resolver, channel: RSSChannel) in
@@ -76,7 +76,7 @@ final class HomeAssembly: Assembly {
     
     private func assembleOptionsViewController(_ container: Container) {
         container.register(OptionsViewModelProtocol.self) { r in
-            return OptionsViewModel(authService: container.resolve(AuthServiceProtocol.self)!, userService: container.resolve(UserServiceProtocol.self)!)
+            return OptionsViewModel(authService: container.resolve(AuthServiceProtocol.self)!, userService: container.resolve(UserServiceProtocol.self)!, userDefaultsService: container.resolve(UserDefaultsServiceProtocol.self)!)
         }.inObjectScope(.transient)
         
         container.register(OptionsViewController.self) { r in

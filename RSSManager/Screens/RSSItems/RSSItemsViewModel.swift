@@ -21,13 +21,15 @@ class RSSItemsViewModel: BaseViewModel {
     
     // MARK: - Private properties
     private let rssItemService: RSSItemServiceProtocol
+    private let rssChannelService: RSSChannelServiceProtocol
     private let xmlParserService: XMLParserServiceProtocol
     private var channel: RSSChannel
     private let itemsRelay: BehaviorRelay<[RSSItem]> = .init(value: [])
     
-    init(channel: RSSChannel, rssItemService: RSSItemServiceProtocol, xmlParserService: XMLParserServiceProtocol) {
+    init(channel: RSSChannel, rssItemService: RSSItemServiceProtocol, xmlParserService: XMLParserServiceProtocol, rssChannelService: RSSChannelServiceProtocol) {
         self.rssItemService = rssItemService
         self.xmlParserService = xmlParserService
+        self.rssChannelService = rssChannelService
         self.channel = channel
         super.init()
     }
@@ -71,6 +73,11 @@ extension RSSItemsViewModel: RSSItemsViewModelProtocol {
         guard let urlString = channel.url else { return }
         networkRequestState.accept(.started)
         xmlParserService.parseXML(urlString: urlString, limit: 20)
+            .flatMap { [unowned self] channel -> Observable<RSSChannel> in
+                self.channel.items = channel.items
+                self.channel.pubDate = channel.pubDate
+                return self.rssChannelService.setNewPubDate(self.channel, pubDate: channel.pubDate ?? "")
+            }
             .flatMap { [unowned self] channel -> Observable<[RSSItem]> in
                 self.channel.items = channel.items
                 return self.rssItemService.fetchRSSItems(with: nil)

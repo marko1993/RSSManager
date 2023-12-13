@@ -16,6 +16,9 @@ final class ServiceAssembly: Assembly {
         self.assembleXMLParserService(container)
         self.assembleRSSChannelService(container)
         self.assembleRSSItemService(container)
+        self.assembleNotificationService(container)
+        self.assembleBackgroundService(container)
+        self.assembleUserDefaultsService(container)
     }
     
     private func assembleAuthService(_ container: Container) {
@@ -45,6 +48,24 @@ final class ServiceAssembly: Assembly {
     private func assembleRSSItemService(_ container: Container) {
         container.register(RSSItemServiceProtocol.self) { r in
             return RSSItemService()
+        }.inObjectScope(.transient)
+    }
+    
+    private func assembleBackgroundService(_ container: Container) {
+        container.register(BackgroundServiceProtocol.self) { r in
+            return BackgroundService(xmlParserService: container.resolve(XMLParserServiceProtocol.self)!, rssChannelService: container.resolve(RSSChannelServiceProtocol.self)!)
+        }.inObjectScope(.transient)
+    }
+    
+    private func assembleNotificationService(_ container: Container) {
+        container.register(NotificationServiceProtocol.self) { r in
+            return NotificationService()
+        }.inObjectScope(.transient)
+    }
+    
+    private func assembleUserDefaultsService(_ container: Container) {
+        container.register(UserDefaultsServiceProtocol.self) { r in
+            return UserDefaultsService()
         }.inObjectScope(.transient)
     }
     

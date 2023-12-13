@@ -45,6 +45,9 @@
 		ADC405662B25FE5D00DE1A6A /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC405652B25FE5D00DE1A6A /* AuthService.swift */; };
 		ADD03B1F2B270CC60004B638 /* RSSChannelService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD03B1E2B270CC60004B638 /* RSSChannelService.swift */; };
 		ADD03B212B272C110004B638 /* RSSChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD03B202B272C110004B638 /* RSSChannelCell.swift */; };
+		ADD421472B29FFE200089680 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD421462B29FFE200089680 /* NotificationService.swift */; };
+		ADD421492B2A013B00089680 /* BackgroundService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD421482B2A013B00089680 /* BackgroundService.swift */; };
+		ADD4214B2B2A14C600089680 /* UserDefaultsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD4214A2B2A14C600089680 /* UserDefaultsService.swift */; };
 		ADEA8A422B25FF7B0024ABA8 /* ServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A412B25FF7B0024ABA8 /* ServiceAssembly.swift */; };
 		ADEA8A452B260BE40024ABA8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A442B260BE30024ABA8 /* User.swift */; };
 		ADEA8A472B260C140024ABA8 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADEA8A462B260C140024ABA8 /* UserService.swift */; };
@@ -143,6 +146,9 @@
 		ADC405652B25FE5D00DE1A6A /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		ADD03B1E2B270CC60004B638 /* RSSChannelService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSChannelService.swift; sourceTree = "<group>"; };
 		ADD03B202B272C110004B638 /* RSSChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSSChannelCell.swift; sourceTree = "<group>"; };
+		ADD421462B29FFE200089680 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		ADD421482B2A013B00089680 /* BackgroundService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundService.swift; sourceTree = "<group>"; };
+		ADD4214A2B2A14C600089680 /* UserDefaultsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsService.swift; sourceTree = "<group>"; };
 		ADEA8A412B25FF7B0024ABA8 /* ServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAssembly.swift; sourceTree = "<group>"; };
 		ADEA8A442B260BE30024ABA8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		ADEA8A462B260C140024ABA8 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
@@ -361,6 +367,9 @@
 				ADEA8A4F2B263FB00024ABA8 /* XMLParserService.swift */,
 				ADD03B1E2B270CC60004B638 /* RSSChannelService.swift */,
 				AD14BD522B28C8BE00841C80 /* RSSItemService.swift */,
+				ADD421462B29FFE200089680 /* NotificationService.swift */,
+				ADD421482B2A013B00089680 /* BackgroundService.swift */,
+				ADD4214A2B2A14C600089680 /* UserDefaultsService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -856,7 +865,10 @@
 				ADB19F942B278A5D00C59F94 /* RSSItemCell.swift in Sources */,
 				ADFCE3822B237D2C00BF07A9 /* HomeViewModel.swift in Sources */,
 				AD14BD552B28D14B00841C80 /* NSMutableAttributedString+Extensions.swift in Sources */,
+				ADD421492B2A013B00089680 /* BackgroundService.swift in Sources */,
 				ADFCE36E2B23762A00BF07A9 /* String+Extensions.swift in Sources */,
+				ADD421472B29FFE200089680 /* NotificationService.swift in Sources */,
+				ADD4214B2B2A14C600089680 /* UserDefaultsService.swift in Sources */,
 				AD30ECB42B247CFC00C071CF /* RegisterViewController.swift in Sources */,
 				AD14BD512B28BCF100841C80 /* EmptyContentView.swift in Sources */,
 				AD30ECA62B2473D800C071CF /* LikedViewModel.swift in Sources */,
@@ -1067,7 +1079,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				DEVELOPMENT_TEAM = 8Y9Z4FAZRU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSManager/Info.plist;
@@ -1100,7 +1112,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				DEVELOPMENT_TEAM = 8Y9Z4FAZRU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RSSManager/Info.plist;
@@ -1134,7 +1146,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				DEVELOPMENT_TEAM = 8Y9Z4FAZRU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1157,7 +1169,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				DEVELOPMENT_TEAM = 8Y9Z4FAZRU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -1178,7 +1190,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				DEVELOPMENT_TEAM = 8Y9Z4FAZRU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
@@ -1198,7 +1210,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2GKTGSB5FH;
+				DEVELOPMENT_TEAM = 8Y9Z4FAZRU;
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
